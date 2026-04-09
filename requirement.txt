@@ -1,3 +1,2 @@
 streamlit
-supabase-py
-postgrest
+supabase==2.3.4
