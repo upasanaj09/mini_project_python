@@ -9,13 +9,13 @@ db=create_client(SUPABASE_URL, SUPABASE_KEY)
 st.title('P1 - Student Records')
 
 # INSERT - run once, then comment out
-students=[
-    {"name":"Ali Hassan", "email":"ali@uni.edu","age":20, "gpa":3.8},
-    {"name":"Siti Aishah", "email":"siti@uni.edu","age":21, "gpa":3.2},
-    {"name":"Raj Kumar", "email":"raj@uni.edu","age":19, "gpa":2.9},
-    {"name":"Lin Wei", "email":"lin@uni.edu","age":22, "gpa":3.5},
- ]
-db.table('students').insert(students).execute()
+#students=[
+    #{"name":"Ali Hassan", "email":"ali@uni.edu","age":20, "gpa":3.8},
+    #{"name":"Siti Aishah", "email":"siti@uni.edu","age":21, "gpa":3.2},
+    #{"name":"Raj Kumar", "email":"raj@uni.edu","age":19, "gpa":2.9},
+    #{"name":"Lin Wei", "email":"lin@uni.edu","age":22, "gpa":3.5},
+ #]
+#db.table('students').insert(students).execute()
 ids={r['name']:r['id'] for r in db.table('students').select('id,name').execute().data}
 
 enrollments=[
